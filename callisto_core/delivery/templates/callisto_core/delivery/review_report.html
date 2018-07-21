@@ -20,7 +20,7 @@
         <div class="action-columns">
             <div class="col-sm-12 col-xs-24 report-it-now">
                 <h3>Report</h3>
-                <p>Send your saved record to COORDINATOR to let them know what happened. You'll need to verify your email address and provide your contact info so your school can reach out about next steps.</p>
+                <p>Send your saved record to a lawyer for advice regarding legal proceedings. You'll need to verify your email address and provide your contact info so that you can be contacted about next steps.</p>
                 {% if report.submitted_to_school %}
                     <div class="button">
                         <a class="btn btn-primary btn-block" href="{% url 'resubmit_prep' report.uuid %}">Resubmit record</a>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-sm-12 col-xs-24 wait-for-others">
                 <h3>Match</h3>
-                <p>Enter your perpetrator's identity, which will only be sent to COORDINATOR if someone else names the same person. You'll need to verify your email address and provide your contact info so your school can reach out about next steps if a match is made.</p>
+                <p>Enter your perpetrator's identity, which will only be sent to your lawyer if someone else names the same person. You'll need to verify your email address and provide your contact info so that you can be contacted about next steps if a match is made.</p>
                 {% if report.entered_into_matching %}
                     <div class="record-result">Identity stored - {% if report.match_found %}match found{% else %}waiting for others{% endif %}.</div>
                     <div class="button">
