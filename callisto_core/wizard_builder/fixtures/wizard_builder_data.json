@@ -27,11 +27,11 @@
     "model": "wizard_builder.formquestion",
     "pk": 1,
     "fields": {
-      "text": "food options",
-      "descriptive_text": "choose some!",
+      "text": "Please describe your experience as best as you can.",
+      "descriptive_text": "Use your own words.",
       "page": 1,
       "position": 0,
-      "type": "checkbox",
+      "type": "textarea",
       "sites": [
         1
       ]
@@ -41,21 +41,7 @@
     "model": "wizard_builder.formquestion",
     "pk": 2,
     "fields": {
-      "text": "do androids dream of electric sheep?",
-      "descriptive_text": "answer wisely",
-      "page": 2,
-      "position": 0,
-      "type": "singlelinetext",
-      "sites": [
-        1
-      ]
-    }
-  },
-  {
-    "model": "wizard_builder.formquestion",
-    "pk": 3,
-    "fields": {
-      "text": "eat it now???",
+      "text": "Location",
       "descriptive_text": "",
       "page": 1,
       "position": 0,
@@ -67,82 +53,16 @@
   },
   {
     "model": "wizard_builder.formquestion",
-    "pk": 4,
+    "pk": 3,
     "fields": {
-      "text": "whats on the radios?",
-      "descriptive_text": "pick a type",
-      "page": 3,
+      "text": "Date",
+      "descriptive_text": "",
+      "page": 1,
       "position": 0,
-      "type": "radiobutton",
+      "type": "singlelinetext",
       "sites": [
         1
       ]
-    }
-  },
-  {
-    "model": "wizard_builder.choice",
-    "pk": 1,
-    "fields": {
-      "question": 1,
-      "text": "vegetables",
-      "position": 0,
-      "extra_info_text": "extra information here"
-    }
-  },
-  {
-    "model": "wizard_builder.choice",
-    "pk": 2,
-    "fields": {
-      "question": 1,
-      "text": "apples",
-      "position": 0,
-      "extra_info_text": ""
-    }
-  },
-  {
-    "model": "wizard_builder.choice",
-    "pk": 3,
-    "fields": {
-      "question": 1,
-      "text": "sugar",
-      "position": 0,
-      "extra_info_text": ""
-    }
-  },
-  {
-    "model": "wizard_builder.choice",
-    "pk": 4,
-    "fields": {
-      "question": 4,
-      "text": "guitar",
-      "position": 0,
-      "extra_info_text": ""
-    }
-  },
-  {
-    "model": "wizard_builder.choice",
-    "pk": 5,
-    "fields": {
-      "question": 4,
-      "text": "drums",
-      "position": 0,
-      "extra_info_text": ""
-    }
-  },
-  {
-    "model": "wizard_builder.choiceoption",
-    "pk": 1,
-    "fields": {
-      "choice": 2,
-      "text": "green"
-    }
-  },
-  {
-    "model": "wizard_builder.choiceoption",
-    "pk": 2,
-    "fields": {
-      "choice": 2,
-      "text": "red"
     }
   }
 ]
