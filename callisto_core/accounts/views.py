@@ -15,6 +15,11 @@ from django.views.generic import TemplateView
 
 from . import view_partials
 
+class WelcomeView(
+    TemplateView,
+):
+    template_name = 'callisto_core/accounts/welcome.html'
+
 
 class SignupView(
     view_partials.SignupPartial,
