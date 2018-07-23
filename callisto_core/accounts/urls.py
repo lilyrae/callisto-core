@@ -39,4 +39,8 @@ urlpatterns = [
         view=views.AccountActivationView.as_view(),
         name='activate_account',
         ),
+    url(r'^centres/',
+        view=views.CentresListView.as_view(),
+        name='centres_list',
+        ),
 ]

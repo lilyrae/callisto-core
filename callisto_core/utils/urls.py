@@ -21,6 +21,8 @@ urlpatterns = [
     # login / signup
     url(r'^$', django_views.RedirectView.as_view(
         url=reverse_lazy('welcome'))),
+    url(r'^centres/$', django_views.RedirectView.as_view(
+        url=reverse_lazy('centres_list'))),
     url(r'^signup/$', django_views.RedirectView.as_view(
         url=reverse_lazy('signup'))),
     url(r'^logout/$', django_views.RedirectView.as_view(

@@ -20,6 +20,10 @@ class WelcomeView(
 ):
     template_name = 'callisto_core/accounts/welcome.html'
 
+class CentresListView(
+    TemplateView,
+):
+    template_name = 'callisto_core/accounts/centres_list.html'
 
 class SignupView(
     view_partials.SignupPartial,
