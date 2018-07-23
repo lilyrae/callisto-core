@@ -109,3 +109,19 @@ class QuestionField(object):
             choices=question.choices_pk_text_array,
             choice_datas=question.choices_data_array,
         )
+
+    @classmethod
+    def fileupload(cls, question):
+        return forms.FileField(
+            required=False,
+            label=mark_safe(question.text),
+            help_text=mark_safe(question.descriptive_text),
+        )
+
+    @classmethod
+    def date(cls, question):
+        return forms.DateField(
+            required=False,
+            label=mark_safe(question.text),
+            help_text=mark_safe(question.descriptive_text),
+        )

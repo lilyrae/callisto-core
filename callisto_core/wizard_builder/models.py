@@ -202,3 +202,15 @@ class Choice(models.Model):
 class ChoiceOption(models.Model):
     choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
     text = models.TextField(blank=False)
+
+class FileUpload(
+    model_helpers.ProxyQuestion,
+    FormQuestion
+):
+    proxy_name = 'fileupload'
+
+class Date(
+    model_helpers.ProxyQuestion,
+    FormQuestion
+):
+    proxy_name = 'date'

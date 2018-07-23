@@ -24,11 +24,19 @@
     }
   },
   {
+    "model": "wizard_builder.page",
+    "pk": 4,
+    "fields": {
+      "position": 3,
+      "section": 1
+    }
+  },
+  {
     "model": "wizard_builder.formquestion",
     "pk": 1,
     "fields": {
       "text": "Please describe your experience as best as you can.",
-      "descriptive_text": "Use your own words.",
+      "descriptive_text": "",
       "page": 1,
       "position": 0,
       "type": "textarea",
@@ -60,6 +68,20 @@
       "page": 1,
       "position": 0,
       "type": "singlelinetext",
+      "sites": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "wizard_builder.formquestion",
+    "pk": 4,
+    "fields": {
+      "text": "Supporting Evidence",
+      "descriptive_text": "",
+      "page": 1,
+      "position": 0,
+      "type": "fileupload",
       "sites": [
         1
       ]

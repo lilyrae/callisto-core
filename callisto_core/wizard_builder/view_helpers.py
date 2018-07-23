@@ -1,5 +1,6 @@
 import logging
 from copy import copy
+import os
 
 from django.urls import reverse
 
@@ -157,6 +158,12 @@ class StorageHelper(object):
         # get the cleaned data from those forms, add it to answer data
         form = forms[self.view.curent_step]
         data[self.storage_data_key].update(form.cleaned_data)
+
+        # save file uploads
+        if bool(self.view.request.FILES):
+            files = self.handle_file_uploads(self.view.request.FILES)
+            data[self.storage_data_key].update(files)
+
         # return answer data
         return data[self.storage_data_key]
 
@@ -172,6 +179,18 @@ class StorageHelper(object):
             answer_data=data[self.storage_data_key],
             site_id=self.site_id,
         )
+    
+    def handle_file_uploads(self, uploaded_files):
+        files = {}
+        for id in uploaded_files:
+            with open(uploaded_files[id].name, 'wb+') as destination:
+                for chunk in uploaded_files[id].chunks():
+                    destination.write(chunk)
+
+            files[id] = uploaded_files[id].name
+            os.rename(uploaded_files[id].name, './media/' + uploaded_files[id].name)
+
+        return files
 
     def update(self):
         '''
